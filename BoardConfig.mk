@@ -191,12 +191,5 @@ TW_INCLUDE_RESETPROP := true
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 
-# PBRP specific build flags
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_DISABLE_DEFAULT_DM_VERITY := true
-
-# PB Torch
-PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
-
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
