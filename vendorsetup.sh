@@ -67,25 +67,25 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
     	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
-       # Screen Settings
-       export OF_CLOCK_POS=1
-       export OF_HIDE_NOTCH=1
-       export OF_ALLOW_DISABLE_NAVBAR=0
+        # Screen Settings
+        export OF_CLOCK_POS=1
+        export OF_HIDE_NOTCH=0
+        export OF_ALLOW_DISABLE_NAVBAR=0
 
-       # R12.1 Settings
-       export FOX_VERSION="R12.1"
-       export OF_MAINTAINER="MAdMiZ"
-       export FOX_BUILD_TYPE="Beta"
+        # R12.1 Settings
+        export FOX_VERSION="R12.1"
+        export OF_MAINTAINER="MAdMiZ"
+        export FOX_BUILD_TYPE="Beta"
 
-       # Necessary to decrypt most r5x ROMs
-       export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
+        # Necessary to decrypt most r5x ROMs
+        export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
 
-       # Disable wrappedkey?
-       if [ "$OF_DISABLE_WRAPPEDKEY" = "1" ]; then
+        # Disable wrappedkey?
+        if [ "$OF_DISABLE_WRAPPEDKEY" = "1" ]; then
 	  export FOX_VARIANT="unwrap"
-       fi
+        fi
 
-       # Magisk
+        # Magisk
 	if [ -n "${FOX_USE_SPECIFIC_MAGISK_ZIP}" ]; then
 		if [ ! -e "${FOX_USE_SPECIFIC_MAGISK_ZIP}" ]; then
 			echo "Downloading the Latest Release of Magisk..."
