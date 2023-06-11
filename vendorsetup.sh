@@ -38,7 +38,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
- 	export FOX_ENABLE_APP_MANAGER=1
  	export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
  	export OF_USE_GREEN_LED=0
 	export OF_FBE_METADATA_MOUNT_IGNORE=1
@@ -58,9 +57,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_PATCH_AVB20=1
     	export FOX_DELETE_AROMAFM=1
     	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
-    	export FOX_ENABLE_APP_MANAGER=0
-    	export FOX_DISABLE_APP_MANAGER=1
-
+ 	export FOX_ENABLE_APP_MANAGER=1
+    	export FOX_DISABLE_APP_MANAGER=0	
     	# OTA
     	export OF_KEEP_DM_VERITY=1
     	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
@@ -75,7 +73,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # R12.1 Settings
         export FOX_VERSION="R12.1"
         export OF_MAINTAINER="MAdMiZ"
-        export FOX_BUILD_TYPE="Beta"
+        export FOX_BUILD_TYPE="Stable"
 
         # Necessary to decrypt most r5x ROMs
         export OF_FIX_DECRYPTION_ON_DATA_MEDIA=1
