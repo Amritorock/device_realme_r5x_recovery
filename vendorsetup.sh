@@ -66,11 +66,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SUPPORT_OZIP_DECRYPTION=1
         export OF_DEFAULT_KEYMASTER_VERSION=4.0
 	export FOX_USE_NANO_EDITOR=1
-    	# OTA
-    	export OF_KEEP_DM_VERITY=1
-    	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
-    	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-    	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+    	# dispense with the entire OTA menu
+        export OF_DISABLE_OTA_MENU=1
+        # no additional check for MIUI props
+        export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 
         # Screen Settings
         export OF_CLOCK_POS=1
