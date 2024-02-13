@@ -9,8 +9,6 @@
 /vbmeta         emmc   /dev/block/bootdevice/by-name/vbmeta      flags=backup=1;display="Vbmeta";flashimg=1
 /cache          ext4   /dev/block/bootdevice/by-name/cache       flags=display="Cache"
 /metadata       ext4   /dev/block/bootdevice/by-name/logdump     flags=display="Metadata";fsflags="discard"
-/super_cust     emmc   /dev/block/by-name/cust                   flags=display="Super_cust";backup=1
-/super_vendor   emmc   /dev/block/by-name/vendor                 flags=display="Super_vendor";backup=1
 
 /data           ext4   /dev/block/bootdevice/by-name/userdata    flags=fileencryption=ice:aes-256-cts
 /storage        ext4   /data/media/0                             flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable

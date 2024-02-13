@@ -27,6 +27,13 @@
 
 import /init.recovery.qcom_decrypt.rc
 
+service detect-dynamic-partitions /system/bin/detect-dynamic-partitions.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -34,6 +41,7 @@ on fs
 
 on init
     setprop vendor.gatekeeper.disable_spu true
+    start detect-dynamic-partitions
 
 service unified-script /system/bin/unified-script.sh
     user root

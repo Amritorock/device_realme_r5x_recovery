@@ -1,0 +1,3 @@
+/system_ext	ext4	system_ext		flags=display="System_Ext"
+/super_cust     emmc   /dev/block/by-name/cust                   flags=display="Super_cust";backup=1
+/super_vendor   emmc   /dev/block/by-name/vendor                 flags=display="Super_vendor";backup=1
