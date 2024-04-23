@@ -60,20 +60,19 @@ TARGET_BOOTLOADER_BOARD_NAME := trinket
 PRODUCT_PLATFORM := trinket
 
 # Encryption
-TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
-TW_USE_FSCRYPT_POLICY := 1
+TW_USE_FSCRYPT_POLICY := 2
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
 # File systems
-TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2127-12-31
+PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION := 16.1.0
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
@@ -92,7 +91,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=a600000.dwc3 \
     firmware_class.path=/vendor/firmware_mnt/image \
     earlycon=msm_geni_serial,0x880000 \
-    loop.max_part=7 \
     cgroup.memory=nokmem,nosocket \
     androidboot.selinux=permissive
 
@@ -121,7 +119,7 @@ BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 TARGET_COPY_OUT_SYSTEM := system
 TARGET_COPY_OUT_ODM := odm
