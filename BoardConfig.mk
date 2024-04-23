@@ -92,7 +92,11 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware_mnt/image \
     earlycon=msm_geni_serial,0x880000 \
     cgroup.memory=nokmem,nosocket \
-    androidboot.selinux=permissive
+    androidboot.selinux=permissive \
+    androidboot.super_partition=system \
+    androidboot.android_dt_dir=/non-existent \
+    androidboot.boot_devices=soc/4744000.sdhci
+
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
