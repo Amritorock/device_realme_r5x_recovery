@@ -28,11 +28,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, device/realme/r5x/device.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := r5x
-PRODUCT_NAME := omni_r5x
+PRODUCT_NAME := twrp_r5x
 PRODUCT_BRAND := Realme
 PRODUCT_MODEL := 5/5s/5i/5NFC
 PRODUCT_MANUFACTURER := Realme
