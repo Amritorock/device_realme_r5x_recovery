@@ -92,7 +92,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=a600000.dwc3 \
     firmware_class.path=/vendor/firmware_mnt/image \
     earlycon=msm_geni_serial,0x880000 \
-    loop.max_part=7 \
     cgroup.memory=nokmem,nosocket \
     androidboot.selinux=permissive
 
