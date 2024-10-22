@@ -57,7 +57,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_PATCH_AVB20=1
     	export FOX_DELETE_AROMAFM=1
     	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
- 	export FOX_ENABLE_APP_MANAGER=1	
+ 	export FOX_ENABLE_APP_MANAGER=1
         export TARGET_DEVICE_ALT=r5x
 	export TARGET_DEVICE_ALT=RMX2030
         export TARGET_DEVICE_ALT=RMX1911
@@ -66,6 +66,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_SUPPORT_OZIP_DECRYPTION=1
         export OF_DEFAULT_KEYMASTER_VERSION=4.0
 	export FOX_USE_NANO_EDITOR=1
+        export OF_ENABLE_FS_COMPRESSION=1
     	# dispense with the entire OTA menu
         export OF_DISABLE_OTA_MENU=1
         # no additional check for MIUI props
@@ -83,10 +84,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # R12.1 Settings
         export FOX_VERSION="R12.1"
         export OF_MAINTAINER="AmritoRock"
-        export FOX_BUILD_TYPE="Stable"
-	export FOX_VARIANT="$(date '+%Y%m%d-%H%M')"
+        export FOX_BUILD_TYPE="Erofs"
+	export FOX_VARIANT="Fbev2"
 
-        # run a process after formatting data to recreate /data/media/0 
+        # run a process after formatting data to recreate /data/media/0
         export OF_FORCE_CREATE_DATA_MEDIA_ON_FORMAT=1
 
         # Necessary to decrypt most r5x ROMs

@@ -46,8 +46,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Default FS type
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+
+# EROFS-utils
+PRODUCT_PACKAGES += \
+    erofs-utils
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+TW_INCLUDE_FASTBOOTD := true
 
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 28
