@@ -61,7 +61,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm660
 PRODUCT_PLATFORM := sdm660
 
 # Encryption
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_USE_FSCRYPT_POLICY := 2
@@ -93,7 +92,8 @@ BOARD_KERNEL_CMDLINE := \
     printk.devkmsg=on \
     usbcore.autosuspend=7 \
     kpti=off \
-    androidboot.boot_devices=soc/c0c4000.sdhci
+    androidboot.boot_devices=soc/c0c4000.sdhci \
+    androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
